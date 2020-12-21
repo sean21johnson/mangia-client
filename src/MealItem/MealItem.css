@@ -1,0 +1,44 @@
+img {
+    height: 250px;
+    width: 250px;
+}
+
+/* .MealItem_list {
+    width: auto;
+    display: inline-flex
+} */
+
+.MealItem img {
+    width: 40%;
+    height: 40%;
+}
+
+.MealsList_list {
+    display: contents;
+}
+
+.meal_picture_name {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width: 40%;
+    text-align: center;
+}
+
+.additional_details {
+    width: 40%;
+    font-size: 10px;
+}
+
+.mangia_description {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.mangia_starting {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto; 
+}
+

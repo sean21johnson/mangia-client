@@ -1,0 +1,59 @@
+.login_username_div {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px black dotted;
+    padding: 5px;
+    margin-right: 15px;
+    background-color: bisque;
+}
+
+.login_username_class {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.login_password_div {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px black dotted;
+    padding: 5px;
+    margin-right: 15px;
+    background-color: bisque;
+}
+
+.login_password_class {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.login_buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login_cancel_button {
+    margin-right: 30px;
+}
+
+.Login_Header {
+        font-family: monospace;
+        background-color: aliceblue;
+        color: #e43d00;
+        width: 51%;
+        padding-left: 30px;
+        margin-left: 25px;
+        width: 40%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 5px;
+}
+
+

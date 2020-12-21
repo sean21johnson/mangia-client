@@ -1,0 +1,28 @@
+.footer {
+    width: 100%;
+    background-color: #3f4590e0;
+}
+
+.footer_brand-container {
+    text-align: center;
+}
+
+.copyright-text {
+    color: #f7f6f6;
+    font-family: system-ui;
+    font-size: 13px;
+}
+
+.github {
+    color: white;
+    margin-right: 8px;
+}
+
+.linkedin {
+    color: white;
+}
+
+.footer_social-media {
+    padding-top: 6px;
+    margin-bottom: -10px;
+}

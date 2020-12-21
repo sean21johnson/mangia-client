@@ -1,0 +1,106 @@
+.CreateNewMeal_header {
+    text-align: center;
+    font-family: sans-serif;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    background-color: #ab4646e0;
+    color: white;
+    padding: 3px;
+    border-radius: 2px;
+    margin-top: 18px;
+}
+
+.meal_name_div {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px black dotted;
+    padding: 5px;
+    margin-right: 15px;
+    background-color: bisque;
+}
+
+.meal_image_div {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px black dotted;
+    padding: 5px;
+    margin-right: 15px;
+    background-color: bisque;
+}
+
+.meal_category_div {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;    
+    border: 1px black dotted;
+    padding: 5px;
+    margin-right: 15px;
+    background-color: bisque;
+}
+
+.meal_description_div {
+    display: flex;
+    flex-direction: column;
+    color: #ab4646e0;
+    font-weight: bold;
+    font-family: sans-serif;
+    border: 1px black dotted;
+    padding: 5px;
+    margin-right: 15px;
+    background-color: bisque;
+    margin-left: 15px;
+    
+}
+
+.meal_name_class {
+    color: #ab4646e0;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.meal_image_class {
+    color: #ab4646e0;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.meal_category_class {
+    color: #ab4646e0;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.meal_description_class {
+    color: #ab4646e0;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding-bottom: 7px
+}
+
+.meal_textarea_class {
+    height: 80px
+}
+
+.CreateNewMeal_buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.create_cancel_button {
+    margin-right: 30px;
+}
+
+
+

@@ -1,0 +1,35 @@
+.NavMeal {
+    margin: 11px;
+    padding: 7px;
+    background-color: #ffdcad;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Search_Meal {
+    width: 25%;
+    font-size: 10px;
+    text-align: center;
+    font-family: serif;
+    border-radius: 10px;
+    border: white;
+}
+
+.Create_Meal {
+    color: white;
+    background-color: #ab4646e0;
+    font-size: 12px;
+    border-radius: 5px;
+    border: white;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 1px;
+    padding: 2px;
+}
+
+.category_dropdown {
+    width: 25%;
+    font-size: 10px;
+}

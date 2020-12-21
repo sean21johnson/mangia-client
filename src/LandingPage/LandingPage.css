@@ -1,0 +1,43 @@
+h1 {
+    font-variant-caps: petite-caps;
+    font-family: monospace;
+    text-align: center;
+    font-size: 40px;
+    margin: 8px;
+    background-image: url(https://imgur.com/4jbDbuZ.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    padding: 20%;
+    border-radius: 5px;
+    color: #dde2e2;
+    text-shadow: 2px 2px black;
+}
+
+.Helper_Header {
+    font-family: monospace;
+    background-color: aliceblue;
+    color: #e43d00;
+    width: 64%;
+}
+
+.GettingStarted_Header {
+    font-family: monospace;
+    background-color: aliceblue;
+    color: #e43d00;
+    width: 51%;
+}
+
+.Helper_paragraphs {
+    font-family: sans-serif;
+}
+
+.GettingStarted_List {
+    font-family: sans-serif;
+}
+
+.LandingPage {
+    background-color: #fff7f4;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
