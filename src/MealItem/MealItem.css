@@ -1,7 +1,4 @@
-img {
-    height: 250px;
-    width: 250px;
-}
+
 
 /* .MealItem_list {
     width: auto;
@@ -9,8 +6,9 @@ img {
 } */
 
 .MealItem img {
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    height: 30%;
+    border-radius: 5px;
 }
 
 .MealsList_list {
@@ -20,13 +18,14 @@ img {
 .meal_picture_name {
     margin-top: 1px;
     margin-bottom: 1px;
-    width: 40%;
+    width: 30%;
     text-align: center;
 }
 
 .additional_details {
-    width: 40%;
+    width: 30%;
     font-size: 10px;
+    margin-bottom: 2px;
 }
 
 .mangia_description {
@@ -41,4 +40,28 @@ img {
     margin-right: auto;
     margin-left: auto; 
 }
+
+.meal_paragraph_details {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.meal_description_details {
+    margin-top: 5px;
+}
+
+.Meal_delete {
+    font-size: 10px;
+}
+
+.Meal_edit {
+    font-size: 10px;
+}
+
+.meal_buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
 

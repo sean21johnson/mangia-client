@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MealItem from '../MealItem/MealItem';
 import ApiContext from '../ApiContext'
-import { findMeal } from './../meals-helper';
 import Footer from './../Footer/Footer';
 import Nav from './../Nav/Nav';
 import NavMeal from './../NavMeal/NavMeal';
@@ -27,7 +26,6 @@ class MealList extends Component {
     //We then map each meal in the meals array to the MealItem component. 
     render() { 
         const { meals } = this.context
-        const { mealId } = this.props.match.params
         // const meal = findMeal(meals, mealId) || { description: '' }
 
         return ( 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ApiContext from '../ApiContext'
 import './NavMeal.css'
 
@@ -7,7 +7,7 @@ class NavMeal extends Component {
 
     static contextType = ApiContext;
 
-    //add event handler so that if they select 'all meals' it will redirect to the getAllMeals event handler in the app component and re-render all meals
+    //need to pass this to a different get API request from server using query strings so that it will only display the meals for a given category
     handleCategoryChoice = (e) => {
         e.preventDefault()
         this.context.categoryFilter(e.target.value)

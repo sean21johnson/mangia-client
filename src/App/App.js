@@ -1,19 +1,14 @@
 import React, { Component } from 'react'
-import { Route, Link } from 'react-router-dom'
-import Nav from '../Nav/Nav'
+import { Route } from 'react-router-dom'
 import MealList from './../MealList/MealList';
-import config from '../config'
 import './App.css'
-import NavMeal from './../NavMeal/NavMeal';
 import LandingPage from '../LandingPage/LandingPage';
-import Footer from './../Footer/Footer';
 import Instructions from '../Instructions/Instructions';
 import CreateNewMeal from './../CreateNewMeal/CreateNewMeal';
 import ApiContext from '../ApiContext'
-import MealItem from '../MealItem/MealItem';
-import EditMeal from './../EditMeal/EditMeal';
 import Login from './../Login/Login';
 import Signup from './../Signup/Signup';
+import config from './../config';
 
 
 class App extends Component {
@@ -22,6 +17,7 @@ class App extends Component {
     indexOfMeal: null,
     filter: null,
     search: null,
+    idOfMeal: null
   };
 
   //method to fetch all meals and set the state to be all meals from the database for a given user
@@ -45,7 +41,44 @@ class App extends Component {
       })
   }
 
+  handleCategoryFilter = category => {
+    Promise.all([
+      fetch(`${config.API_ENDPOINT}/meals?filter=${category}`)
+    ])
+      .then(([mealsRes]) => {
+        if (!mealsRes.ok)
+          return mealsRes.json().then(e => Promise.reject(e))
 
+        return Promise.all([
+          mealsRes.json()
+        ])
+      })
+      .then(([meals]) => {
+        if(category === "All Meals") {
+          this.getAllMeals()
+        }
+        this.setState({ meals })
+      })
+  }
+
+  handleSearchFilter = searchTerm => {
+    Promise.all([
+      fetch(`${config.API_ENDPOINT}/meals?search=${searchTerm}`)
+    ])
+      .then(([mealsRes]) => {
+        if (!mealsRes.ok)
+          return mealsRes.json().then(e => Promise.reject(e))
+
+        return Promise.all([
+          mealsRes.json()
+        ])
+      })
+      .then(([meals]) => {
+        this.setState({ meals })
+      })
+  }
+
+  //on page load we can set the state of the dropdown to the original placeholder
   componentDidMount() {
     this.getAllMeals()
   }
@@ -68,38 +101,34 @@ class App extends Component {
     this.getAllMeals()
   }
 
-  handleUpdateMeal = () => {
+  handleUpdateMeal = id => {
     this.getAllMeals()
+    this.setState({
+      idOfMeal: null
+    })
+  }
+
+  handleUpdateMealId = id => {
+    if (id === this.state.idOfMeal) {
+      this.setState({
+        idOfMeal: null
+      })}
+    else {
+    this.setState({
+      idOfMeal: id
+    })}
   }
 
   handleUpdateIndex = index => {
     this.setState({
-      indexOfMeal: index
+      indexOfMeal: index,
+      idOfMeal: null
     })
   }
 
-  //trying to figure out how to filter for 'breakfast' and then for 'lunch' for example, and have it reset state to all meals before trying to get lunch
-  handleCategoryFilter = category => {
-    if (category === 'All Meals') {
-      this.setState({
-        filter: category
-      })
-      return this.getAllMeals()
-    }
-    else if (category !== this.state.filter) {
-      this.setState({
-        meals: this.state.meals.filter(meal => meal.meal_category === category),
-        indexOfMeal: null,
-        filter: category,
-    })}
-  }
 
-  handleSearchFilter = searchTerm => {
-    this.setState({
-      meals: this.state.meals.filter(meal => meal.meal_name.toLowerCase().includes(searchTerm.toLowerCase())),
-      search: searchTerm
-    })
-  }
+
+
 
   renderRoutes() {
     return (
@@ -122,10 +151,12 @@ class App extends Component {
       meals: this.state.meals,
       indexOfMeal: this.state.indexOfMeal,
       category: this.state.category,
+      idOfMeal: this.state.idOfMeal,
       everyMeal: this.getAllMeals,
       addMeal: this.handleAddMeal,
       deleteMeal: this.handleDeleteMeal,
       updateMeal: this.handleUpdateMeal,
+      updateMealId: this.handleUpdateMealId,
       updateIndex: this.handleUpdateIndex,
       categoryFilter: this.handleCategoryFilter,
       searchFilter: this.handleSearchFilter,

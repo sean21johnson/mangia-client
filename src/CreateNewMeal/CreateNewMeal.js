@@ -1,28 +1,18 @@
 import React, { Component } from 'react';
 import config from '../config'
-import ApiContext from '../ApiContext'
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './CreateNewMeal.css'
-import { contextType } from 'react-fontawesome';
 import Footer from './../Footer/Footer';
 import Nav from './../Nav/Nav';
 
 class CreateNewMeal extends Component {
-    //need to determine if this defaultProps value is necessary and ever used
+
     static defaultProps = { 
         history: {
             push: () => {}
         }
     }
 
-    //set a static contextType assigned to the value of ApiContext so we have access to the "context" object which contains this.state.meals and event handler methods
-    static contextType = ApiContext;
-
-    //event handler which waits for a user to enter the meal details and click submit on the form
-    //first deconstructs 'e.target' and then assigns the values that were inputted to a new meal object with the necessary properties
-    //Need to ensure that the properties align with that the server expects on the 'POST' fetch method
-    //Ultimately we take the new meal object and pass it into the context provider method 'addMeal' which should update the state. Also will push us back '/'
-    //We may want to update where it pushes us back to because the landing page 
     handleSubmit = e => {
         e.preventDefault()
         const { meal_name, meal_image, meal_description, meal_category } = e.target
@@ -38,7 +28,6 @@ class CreateNewMeal extends Component {
             headers: {
                 'content-type': 'application/json'
               },
-              body: JSON.stringify(newMeal)
         })
         .then(res => {
             if (!res.ok)
@@ -52,12 +41,10 @@ class CreateNewMeal extends Component {
         })
     }
 
-    //should work once routes are setup
     handleClickCancel = () => {
         this.props.history.push('/meals')
     }
 
-    //render a form for the user to create a new meal and when they hit submit, the handle submit method will be called
     render() { 
         return ( 
             <>
@@ -85,9 +72,7 @@ class CreateNewMeal extends Component {
                             </div>
                             <div className="meal_description_div">
                                 <label className="meal_description_class" htmlFor='meal_description'>Meal Description</label>
-                                <input className="meal_textarea_class" type='textarea' name='meal_description' id='meal_description' placeholder='The best wings I ever had from a pub in NYC. 
-                                Delicious chicken wings tossed in world famous BBQ sauce with a side of blue cheese dressing. Next time I am in the East Village
-                                you will know where to find me!' required></input>
+                                <textarea className="meal_textarea_class" type='textarea' name='meal_description' id='meal_description' placeholder='The best wings I ever had from a pub in NYC. Delicious chicken wings tossed in world famous BBQ sauce with a side of blue cheese dressing. Next time I am in the East Village you will know where to find me!' required></textarea>
                             </div>
 
                             <div className="CreateNewMeal_buttons">

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Nav.css';
 import { faUtensils } from '@fortawesome/free-solid-svg-icons';
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ApiContext from '../ApiContext';
 
 

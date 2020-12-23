@@ -32,12 +32,16 @@ class MealItem extends Component {
     }
 
     handleClickEdit = e => {
-        console.log('edit clicked')
-        const mealId = this.props.id
-        console.log(mealId)
+        if (this.context.idOfMeal !== this.props.id) {
+            this.context.idOfMeal = this.props.id
+            this.context.updateMealId(this.context.idOfMeal)
+        }
+        this.context.updateMealId(this.props.id)
+
     }
 
     handleUpdateStateIndex = e => {
+
         if (this.context.indexOfMeal !== this.props.index) {
             this.context.indexOfMeal = this.props.index
             this.context.updateIndex(this.context.indexOfMeal)
@@ -59,13 +63,20 @@ class MealItem extends Component {
                     {this.props.index === this.context.indexOfMeal && 
                     
                     <div className="additional_details">
-                        <p>{this.props.meal_time}</p>   
-                        <p>{this.props.meal_category}</p>
-                        <p>{this.props.meal_description}</p>
-                        <button className="Meal_delete" type="button" onClick={this.handleClickDelete}>Delete</button>
-                        <button className="Meal_edit" type="button" onClick={this.handleClickEdit}>Edit</button>
+                        <p className="meal_paragraph_details">{this.props.meal_category}: {this.props.meal_time}</p> 
+                        <p className="meal_description_details">{this.props.meal_description}</p>
+                        <div className="meal_buttons">
+                            <button className="Meal_delete" type="button" onClick={this.handleClickDelete}>Delete</button>
+                            <button className="Meal_edit" type="button" onClick={this.handleClickEdit}>Edit</button>
+                        </div>
                     </div>}
 
+
+                    {this.props.id === this.context.idOfMeal &&
+
+                    <div>
+                    <EditMeal id={this.props.id} name={this.props.meal_name} description={this.props.meal_description} url={this.props.meal_image} category={this.props.meal_category}></EditMeal>
+                    </div>}
                     <br/>                    
             </li>
          );

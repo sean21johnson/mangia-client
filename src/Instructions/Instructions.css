@@ -1,0 +1,61 @@
+.Instructions_Header {
+    font-family: monospace;
+    background-color: aliceblue;
+    color: #e43d00;
+    width: 51%;
+    padding-left: 8px;
+    margin-left: 25px;
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.Instructions {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff7f4;
+    padding: 10px 20px 20px 20px;
+}
+
+.Instructions_List {
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.Instructions_opening {
+    font-family: sans-serif;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.image-signup {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.image-newpost {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.image-new {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    height: 70%;
+    width: 70%
+}
+
+.image-copylink {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    height: 70%;
+    width: 70%
+}

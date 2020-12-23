@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import Nav from './../Nav/Nav';
-import { Route, Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom'
 import './LandingPage.css'
-import { BrowserRouter } from 'react-router-dom';
 import Footer from './../Footer/Footer';
-import Instructions from './../Instructions/Instructions';
 
 
 class LandingPage extends Component {
@@ -34,7 +30,7 @@ class LandingPage extends Component {
                             <h2 className="GettingStarted_Header">Getting Started</h2>
                             <ol className="GettingStarted_List">
                                 <li><Link to='/signup'>Sign up</Link> for a Mangia Account.</li>
-                                <li><a href='https://imgur.com/register?redirect=https%3A%2F%2Fimgur.com%2F' target="_blank">Sign up</a> for an Imgur account.</li>
+                                <li><a href='https://imgur.com/register?redirect=https%3A%2F%2Fimgur.com%2F' target="_blank" rel="noreferrer">Sign up</a> for an Imgur account.</li>
                                 <li><Link to='/signup'>Instructions</Link> to create image URL.</li>
                                 <li><Link to='/add-meal'>Add</Link> your first meal.</li>
                             </ol>

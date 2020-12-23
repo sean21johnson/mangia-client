@@ -1,0 +1,47 @@
+.EditMeal {
+    width: 30%;
+    font-size: 10px;
+    font-weight: bold;
+    border: 1px dotted black;
+    padding-bottom: 8px;
+    border-radius: 5px;
+}
+
+.edit_meal_class {
+    width: 80%;
+    margin: 8px 7px;
+    font-size: 8px; 
+}
+
+.edit_image_class {
+    width: 80%;
+    margin: 2px 7px;
+    font-size: 8px; 
+}
+
+.edit_category_class {
+    width: 87%;
+    margin: 7px;
+    font-size: 8px; 
+}
+
+.edit_description_class {
+    width: 82%;
+    height: 35px;
+    margin: 2px 7px;
+    font-size: 8px; 
+}
+
+.EditMeal_buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 6px;
+}
+
+.edit_delete_button {
+    font-size: 10px;
+}
+
+.edit_save_button {
+    font-size: 10px;
+}

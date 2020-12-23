@@ -4,6 +4,10 @@ import React from 'react'
 //Added a method for updating a meal
 export default React.createContext({
     meals: [],
+    indexOfMeal: null,
+    filter: null,
+    search: null,
+    idOfMeal: null,
     everyMeal: () => {},
     addMeal: () => {},
     deleteMeal: () => {},
