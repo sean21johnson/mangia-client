@@ -15,4 +15,5 @@ export default React.createContext({
     updateIndex: () => {},
     categoryFilter: () => {},
     searchFilter: () => {},
+    reset: () => {},
 })

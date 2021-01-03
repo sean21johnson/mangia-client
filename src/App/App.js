@@ -1,29 +1,35 @@
-import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import MealList from './../MealList/MealList';
-import './App.css'
 import LandingPage from '../LandingPage/LandingPage';
 import Instructions from '../Instructions/Instructions';
 import CreateNewMeal from './../CreateNewMeal/CreateNewMeal';
-import ApiContext from '../ApiContext'
+import ApiContext from '../ApiContext';
 import Login from './../Login/Login';
 import Signup from './../Signup/Signup';
 import config from './../config';
+import TokenService from './../services/TokenServices';
+import PublicOnlyRoute from './../Utils/PublicOnlyRoute';
+import PrivateRoute from './../Utils/PrivateRoute';
+import './App.css';
 
 
 class App extends Component {
   state = {
     meals: [],
     indexOfMeal: null,
-    filter: null,
-    search: null,
-    idOfMeal: null
+    idOfMeal: null,
+    searchText: "",
+    dropdownText: "",
   };
 
-  //method to fetch all meals and set the state to be all meals from the database for a given user
   getAllMeals = () => {
     Promise.all([
-      fetch(`${config.API_ENDPOINT}/meals`)
+      fetch(`${config.API_ENDPOINT}/meals`, {
+        headers: {
+          'authorization': `mangia-client-auth-token ${TokenService.getAuthToken()}`,
+        }
+      })
     ])
       .then(([mealsRes]) => {
         if (!mealsRes.ok)
@@ -34,7 +40,11 @@ class App extends Component {
         ])
       })
       .then(([meals]) => {
-        this.setState({ meals })
+        this.setState({ 
+          meals,
+          searchText: "",
+          dropdownText: ""
+        })
       })
       .catch(error => {
         console.error({ error })
@@ -43,7 +53,11 @@ class App extends Component {
 
   handleCategoryFilter = category => {
     Promise.all([
-      fetch(`${config.API_ENDPOINT}/meals?filter=${category}`)
+      fetch(`${config.API_ENDPOINT}/meals?filter=${category}`, {
+        headers: {
+          'authorization': `mangia-client-auth-token ${TokenService.getAuthToken()}`
+        }
+      })
     ])
       .then(([mealsRes]) => {
         if (!mealsRes.ok)
@@ -57,13 +71,20 @@ class App extends Component {
         if(category === "All Meals") {
           this.getAllMeals()
         }
-        this.setState({ meals })
+        this.setState({ 
+          meals,
+          dropdownText: category
+        })
       })
   }
 
   handleSearchFilter = searchTerm => {
     Promise.all([
-      fetch(`${config.API_ENDPOINT}/meals?search=${searchTerm}`)
+      fetch(`${config.API_ENDPOINT}/meals?search=${searchTerm}`, {
+        headers: {
+          'authorization': `mangia-client-auth-token ${TokenService.getAuthToken()}`
+        }
+      })
     ])
       .then(([mealsRes]) => {
         if (!mealsRes.ok)
@@ -74,11 +95,13 @@ class App extends Component {
         ])
       })
       .then(([meals]) => {
-        this.setState({ meals })
+        this.setState({ 
+          meals,
+          searchText: searchTerm 
+        })
       })
   }
 
-  //on page load we can set the state of the dropdown to the original placeholder
   componentDidMount() {
     this.getAllMeals()
   }
@@ -126,32 +149,34 @@ class App extends Component {
     })
   }
 
-
-
-
+  handleSearchUpdate = searchTerm => {
+    this.setState({
+      searchText: searchTerm
+    })
+  }
 
   renderRoutes() {
     return (
       <>
-        <Route exact path='/' component={LandingPage}/>
-        <Route path='/instructions' component={Instructions}/>
-        <Route path='/add-meal' component={CreateNewMeal}/>
-        <Route path='/meals' component={MealList}/>
-        <Route path='/login' component={Login}/>
-        <Route path='/signup' component={Signup}/>
+        <Switch>
+          <Route exact path='/' component={LandingPage}/>
+          <Route path='/instructions' component={Instructions}/>
+          <PrivateRoute path='/add-meal' component={CreateNewMeal}/>
+          <PrivateRoute path='/meals' component={MealList}/>
+          <PublicOnlyRoute path='/login' component={Login}/>
+          <PublicOnlyRoute path='/signup' component={Signup}/>
+        </Switch>
       </>
     )
   }
 
-
-  //We create a value object containing a property for the meals state, and 3 methods to add, remove, or update a meal
-  //The value object is given to all children components of App as a context provider
   render() {
     const value = {
       meals: this.state.meals,
       indexOfMeal: this.state.indexOfMeal,
-      category: this.state.category,
       idOfMeal: this.state.idOfMeal,
+      searchText: this.state.searchText,
+      dropdownText: this.state.dropdownText,
       everyMeal: this.getAllMeals,
       addMeal: this.handleAddMeal,
       deleteMeal: this.handleDeleteMeal,
@@ -160,7 +185,10 @@ class App extends Component {
       updateIndex: this.handleUpdateIndex,
       categoryFilter: this.handleCategoryFilter,
       searchFilter: this.handleSearchFilter,
+      searchChange: this.handleSearchUpdate,
+      categoryChange: this.handleCategoryUpdate,
     }
+
 
     return (
       <ApiContext.Provider value={value}>

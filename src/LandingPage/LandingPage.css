@@ -16,14 +16,12 @@ h1 {
 
 .Helper_Header {
     font-family: monospace;
-    background-color: aliceblue;
     color: #e43d00;
     width: 64%;
 }
 
 .GettingStarted_Header {
     font-family: monospace;
-    background-color: aliceblue;
     color: #e43d00;
     width: 51%;
 }
@@ -41,4 +39,48 @@ h1 {
     background-color: #fff7f4;
     padding-bottom: 2px;
     padding-top: 2px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 88, 88)
+}
+
+
+@media all and (min-width: 700px) {
+    .LandingPage {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        font-size: 85px;
+        width: 50%;
+        height: 60px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+    }
+
+    .Helper_Header {
+        font-size: 30px;
+    }
+
+    .Helper_paragraphs {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .GettingStarted_Header {
+        font-size: 30px;
+    }
+
+    .GettingStarted_List {
+        font-size: 20px;
+        line-height: 2;
+    }
 }

@@ -1,3 +1,44 @@
 .MealsList_list {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    margin-top: 5px;
 }
+
+.meal_collection_header {
+    text-align: center;
+    margin: 5px;
+    font-family: monospace;
+    color:#00007d;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-variant-caps: petite-caps;
+}
+
+
+@media all and (min-width: 700px) {
+    .MealsList {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .meal_collection_header {
+        font-size: 50px;
+        margin-bottom: 35px;
+        margin-top: 15px;
+    }
+
+    .meals_container {
+        column-count: 4;
+    }
+
+    .meal_container_item {
+        break-inside: avoid-column;
+        display: inline-block;
+    }
+
+}
+
+

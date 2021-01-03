@@ -35,6 +35,8 @@ class MealList extends Component {
                     <section className="MealsList">
                         {/* <h2>Meal Collection</h2> */}
                         <ul className="MealsList_list">
+                            <h3 className="meal_collection_header">Meal Collection</h3>
+                            <div className="meals_container">
                             {meals.map((meal, index) => 
                                 <MealItem
                                     index={index}
@@ -44,6 +46,7 @@ class MealList extends Component {
                                     {...meal}
                                 />
                                 )}
+                            </div>
                         </ul>
                     </section>
                 <Footer></Footer>

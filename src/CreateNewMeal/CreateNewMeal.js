@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom'
 import './CreateNewMeal.css'
 import Footer from './../Footer/Footer';
 import Nav from './../Nav/Nav';
+import TokenService from './../services/TokenServices';
+import ApiContext from '../ApiContext';
 
 class CreateNewMeal extends Component {
+
+    static contextType = ApiContext
 
     static defaultProps = { 
         history: {
@@ -13,6 +17,7 @@ class CreateNewMeal extends Component {
         }
     }
 
+    //once a user is logged in, need to extract the user id from the token in local storage and send that as the user id
     handleSubmit = e => {
         e.preventDefault()
         const { meal_name, meal_image, meal_description, meal_category } = e.target
@@ -26,7 +31,8 @@ class CreateNewMeal extends Component {
             method: 'POST',
             body: JSON.stringify(newMeal),
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                'authorization': `mangia-client-auth-token ${TokenService.getAuthToken()}`
               },
         })
         .then(res => {
@@ -35,7 +41,6 @@ class CreateNewMeal extends Component {
             return res.json()
         })
         .then(meal => {
-            console.log(meal)
             this.context.addMeal(meal)
             this.props.history.push('/meals')
         })
@@ -57,7 +62,7 @@ class CreateNewMeal extends Component {
                                 <input type='text' name="meal_name" id='meal_name' placeholder='Buffalo Wings' required></input>
                             </div>
                             <div className="meal_image_div">
-                                <label className="meal_image_class" htmlFor='meal_image'>Meal Image URL</label>
+                                <label className="meal_image_class" htmlFor='meal_image'>*Meal Image URL</label>
                                 <input type='text' name='meal_image' id='meal_image' placeholder='https://imgur.com/jq0R9ix.jpg' required></input>
                             </div>
                             <div className="meal_category_div">
@@ -80,7 +85,7 @@ class CreateNewMeal extends Component {
                                 <button className="create_submit_button" type="submit">Save</button>
                             </div>
                         </form>
-                        <p><Link to='/instructions'>Instructions</Link> to create URL links for meal images</p>
+                        <p className="instructions_paragraph">*<Link to='/instructions'>Instructions</Link> to create URLs for meal images</p>
                     </section>
                 <Footer></Footer>
             </>

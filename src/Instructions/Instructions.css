@@ -5,7 +5,7 @@
     width: 51%;
     padding-left: 8px;
     margin-left: 25px;
-    width: 70%;
+    width: 80%;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 5px;
@@ -58,4 +58,57 @@
     border-radius: 5px;
     height: 70%;
     width: 70%
+}
+
+.imgur_not_required {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+@media all and (min-width: 700px) {
+    .Instructions {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+
+    .Instructions_Header {
+        font-size: 40px;
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .Instructions_opening {
+        font-size: 18px;
+        line-height: 1.5;
+        width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+
+    .Instructions_List {
+        font-size: 19px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    .instructions_image_signup, .instructions_image_newpost, .instructions_image_drag, .instructions_image_meal {
+        margin-bottom: 8px;
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+
+    .instructions_image_drag, .instructions_image_meal {
+        width: 60%;
+    }
+
+    .imgur_not_required {
+        font-size: 18px;
+        margin-top: 35px;
+        margin-left: 20px;
+    }
 }

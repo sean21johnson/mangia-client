@@ -11,15 +11,15 @@ class Footer extends Component {
 
                 <div className="footer_brand-container">
                     <div className="footer_social-media">
-                        <a href="https://github.com/sean21johnson" target="_blank" rel="noreferrer">
+                        <a className="github_logo" href="https://github.com/sean21johnson" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon className ="github" icon={faGithub} />
                         </a>
-                        <a href="www.linkedin.com/in/seanjohnson220" target="_blank" rel="noreferrer">
+                        <a className="linkedin_logo" href="https://linkedin.com/in/seanjohnson220" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon className = "linkedin" icon={faLinkedin} />
                         </a>
                     </div>
                     <div className="copyright-text">
-                        <p>
+                        <p className="copyright_paragraph">
                             Copyright © 2021
                             <br/>
                         </p>

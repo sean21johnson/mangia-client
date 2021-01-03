@@ -29,10 +29,10 @@ class LandingPage extends Component {
                         <section className="mangia_starting">
                             <h2 className="GettingStarted_Header">Getting Started</h2>
                             <ol className="GettingStarted_List">
-                                <li><Link to='/signup'>Sign up</Link> for a Mangia Account.</li>
-                                <li><a href='https://imgur.com/register?redirect=https%3A%2F%2Fimgur.com%2F' target="_blank" rel="noreferrer">Sign up</a> for an Imgur account.</li>
-                                <li><Link to='/signup'>Instructions</Link> to create image URL.</li>
-                                <li><Link to='/add-meal'>Add</Link> your first meal.</li>
+                                <li><Link to='/signup'>Sign up</Link> for a Mangia account</li>
+                                <li><Link to='/login'>Login</Link> to your account</li>
+                                <li><Link to='/add-meal'>Add</Link> your first meal</li>
+                                <li><Link to='/meals'>View</Link> your meal collection</li>
                             </ol>
                         </section>   
                 </div>

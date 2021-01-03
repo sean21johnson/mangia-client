@@ -21,6 +21,15 @@
     font-size: 14px;
 }
 
+.logout_button {
+    margin-right: 5px;
+    margin-left: 10px;
+    background-color: azure;
+    border-radius: 5px;
+    font-family: ui-monospace;
+    font-size: 14px;
+}
+
 .join_button {
     background-color: azure;
     border-radius: 5px;
@@ -44,5 +53,18 @@
     font-size: 18px;
     color: azure;
     text-decoration: none;
+}
+
+@media all and (min-width: 700px) {
+    .mangia_home_link {
+        font-size: 25px;
+    }
+
+    .login_button, .about_button, .logout_button, .join_button {
+        font-size: 20px;
+        margin-left: 40px;
+        margin-right: 20px;
+    }
+
 }
 

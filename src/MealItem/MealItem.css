@@ -1,13 +1,18 @@
+.showing_section {
+    text-align: center;
+    background-color: #fff1f4;
+    padding: 5px 0px;
+    border-radius: 10px;
+}
 
-
-/* .MealItem_list {
-    width: auto;
-    display: inline-flex
-} */
+.MealItem {
+    margin: 10px;
+    background-color: #fff1f4;
+    padding-bottom: 1px;
+}
 
 .MealItem img {
-    width: 30%;
-    height: 30%;
+    width: 90%;
     border-radius: 5px;
 }
 
@@ -18,15 +23,30 @@
 .meal_picture_name {
     margin-top: 1px;
     margin-bottom: 1px;
-    width: 30%;
     text-align: center;
+    font-size: 18px;
+    /* background-color: #00007d; */
+    background-color: #ca0000;
+    color: white;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+    border-radius: 5px;
+    text-shadow: 1px 1px black;
+    font-family: monospace;
 }
 
 .additional_details {
-    width: 30%;
-    font-size: 10px;
+    font-size: 14px;
     margin-bottom: 2px;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin: 0px 20px;
+    background-color: aliceblue;
+    /* margin-bottom: 5px; */
 }
+
 
 .mangia_description {
     width: 90%;
@@ -44,17 +64,17 @@
 .meal_paragraph_details {
     margin-top: 5px;
     margin-bottom: 2px;
+    padding-top: 3px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .meal_description_details {
     margin-top: 5px;
+    font-family: sans-serif;
 }
 
 .Meal_delete {
-    font-size: 10px;
-}
-
-.Meal_edit {
     font-size: 10px;
 }
 
@@ -62,6 +82,43 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 
+
+
+.Meal_delete {
+    font-family: ui-monospace;
+    background-color: #00007d;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+}
+
+.Meal_edit {
+    font-family: ui-monospace;
+    background-color: #00007d;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+}
+
+
+@media all and (min-width: 700px) {
+
+.MealItem img {
+    width: 90%;
+    border-radius: 5px;
+}
+
+.meal_picture_name {
+    width: 63%;
+}
+
+.additional_details {
+    font-size: 14px;
+    margin: 0px 10px;
+}
+
+}
 

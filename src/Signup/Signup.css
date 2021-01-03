@@ -92,6 +92,13 @@
 
 .CreateUser_cancel_button {
     margin-right: 30px;
+    background-color: azure;
+    border-radius: 5px;
+}
+
+.CreateUser_submit_button {
+    background-color: azure;
+    border-radius: 5px;
 }
 
 .Signup_Header {
@@ -106,4 +113,40 @@
     padding-bottom: 10px;
     border-radius: 5px;
     padding: 10px;
+}
+
+@media all and (min-width: 700px) {
+    .signup {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Signup_Header {
+        font-size: 40px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .first_name_class, .last_name_class, .email_class, .username_class, .password_class {
+        font-size: 25px;
+        padding-left: 30px;
+    }
+
+    #first_name, #last_name, #email, #username, #password {
+        width: 40%;
+    }
+
+    .first_name_div, .last_name_div, .email_div, .username_div, .password_div {
+        margin-bottom: 35px;
+    }
+
+    .CreateUser_cancel_button, .CreateUser_submit_button {
+        font-size: 20px;
+        margin-bottom: 25px;
+        margin-top: 15px;
+    }
+
+
+
 }

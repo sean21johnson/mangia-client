@@ -5,7 +5,7 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 20px;
-    background-color: #ab4646e0;
+    background-color: #ca0000;
     color: white;
     padding: 3px;
     border-radius: 2px;
@@ -21,7 +21,7 @@
     border: 1px black dotted;
     padding: 5px;
     margin-right: 15px;
-    background-color: bisque;
+    background-color: #00007d;
 }
 
 .meal_image_div {
@@ -33,7 +33,7 @@
     border: 1px black dotted;
     padding: 5px;
     margin-right: 15px;
-    background-color: bisque;
+    background-color: #00007d;
 }
 
 .meal_category_div {
@@ -45,7 +45,7 @@
     border: 1px black dotted;
     padding: 5px;
     margin-right: 15px;
-    background-color: bisque;
+    background-color: #00007d;
 }
 
 .meal_description_div {
@@ -57,33 +57,38 @@
     border: 1px black dotted;
     padding: 5px;
     margin-right: 15px;
-    background-color: bisque;
+    background-color: #00007d;
     margin-left: 15px;
     
 }
 
 .meal_name_class {
-    color: #ab4646e0;
+    color: white;
     font-weight: bold;
     font-family: sans-serif;
+    text-shadow: 1px 1px black;
+
 }
 
 .meal_image_class {
-    color: #ab4646e0;
+    color: white;
     font-weight: bold;
     font-family: sans-serif;
+    text-shadow: 1px 1px black;
 }
 
 .meal_category_class {
-    color: #ab4646e0;
+    color: white;
     font-weight: bold;
     font-family: sans-serif;
+    text-shadow: 1px 1px black;
 }
 
 .meal_description_class {
-    color: #ab4646e0;
+    color: white;
     font-weight: bold;
     font-family: sans-serif;
+    text-shadow: 1px 1px black;
     padding-bottom: 7px
 }
 
@@ -98,8 +103,64 @@
     margin-bottom: 25px;
 }
 
+.create_submit_button {
+    background-color: azure;
+    border-radius: 5px;
+}
+
 .create_cancel_button {
     margin-right: 30px;
+    background-color: azure;
+    border-radius: 5px;
+}
+
+@media all and (min-width: 700px) {
+
+    .CreateNewMeal {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .CreateNewMeal_header {
+        margin-top: 30px;
+        font-size: 40px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .meal_name_div, .meal_image_div, .meal_category_div, .meal_description_div {
+        margin-bottom: 30px;
+    } 
+
+    #meal_name, #meal_image, #meal_category {
+        width: 40%;
+    }
+
+    .meal_name_class, .meal_image_class, .meal_category_class, .meal_description_class {
+        font-size: 23px;
+        padding-left: 20px;
+    }
+
+    #meal_description.meal_textarea_class {
+        font-size: 15px;
+    }
+
+    .instructions_paragraph {
+        margin-left: 25px;
+        font-size: 20px;
+        
+    }
+
+    .create_submit_button, .create_cancel_button {
+        font-size: 20px;
+        margin-bottom: 25px;
+        margin-top: 15px;
+    }
+
+    .create_cancel_button {
+        margin-right: 55px;
+    }
 }
 
 

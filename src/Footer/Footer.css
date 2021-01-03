@@ -23,6 +23,24 @@
 }
 
 .footer_social-media {
-    padding-top: 6px;
+    padding-top: 7px;
     margin-bottom: -10px;
+}
+
+.copyright_paragraph {
+    padding-bottom: 4px;
+}
+
+.github_logo {
+    margin-right: 12px;
+}
+
+@media all and (min-width: 700px) {
+    .copyright_paragraph {
+        font-size: 18px;
+    }
+
+    .github_logo, .linkedin_logo {
+        font-size: 25px;
+    }
 }
