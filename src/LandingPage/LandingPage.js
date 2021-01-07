@@ -34,6 +34,16 @@ class LandingPage extends Component {
                                 <li><Link to='/add-meal'>Add</Link> your first meal</li>
                                 <li><Link to='/meals'>View</Link> your meal collection</li>
                             </ol>
+                        </section>
+                        <section className="mangia_demo">
+                            <h2 className="Demo_Header">Demo</h2>
+                            <p className="Demo_paragraph">
+                                If you would like to quickly demo Mangia, please use the below username/password to login. A collection of meals has already been created on this demo user account so you can view
+                                the features that we have to offer.
+                            </p>
+                            <p className="Demo_user_details"></p>
+                                <p className="Demo_login">Login: TestAccount</p>
+                                <p className="Demo_password">Password: Mangia123!</p>
                         </section>   
                 </div>
             <Footer></Footer>

@@ -7,15 +7,18 @@ class NavMeal extends Component {
 
     static contextType = ApiContext;
 
+    //If user selects a given meal category, pass the target value to App component event handler to update the state
     handleCategoryChoice = (e) => {
         this.context.categoryFilter(e.target.value)
     }
 
+    //If a user inputs a search term, pass the target value to the App component event handler which will see if any of the meals names in the database contain the search term
     handleSearchChoice = (e) => {
         if (e.key === 'Enter')
             this.context.searchFilter(e.target.value)
     }
 
+    //Pass the value that the user inputted to the App component which will wait for getAllMeals to be called again. When called, it will remove the searchTerm from the search bar and replace with 'Search for Meal'
     handleSearchChange = (e) => {
         this.context.searchChange(e.target.value)
     }

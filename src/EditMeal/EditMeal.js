@@ -3,17 +3,11 @@ import ApiContext from '../ApiContext';
 import config from './../config';
 import './EditMeal.css'
 
-//need to figure out how to get to this edit meal page when the user clicks on edit meal
-//will need to pass the meal as a prop to this component from the 'MealList' component so we know which meal to edit
 class EditMeal extends Component {
 
     static contextType = ApiContext;
 
-    handleClickCancelEdit = id => {
-        this.context.updateMealId(id)
-
-    }
-
+    //User fills in the form to edit a meal and passes to the handleEditSubmit method which in turn uses a GET fetch API to PATCH details of an existing meal in the database
     handleEditSubmit = e => {
         e.preventDefault()
         const { edit_meal_name, edit_meal_image, edit_meal_description, edit_meal_category } = e.target
@@ -39,6 +33,11 @@ class EditMeal extends Component {
         .then(meal => {
             this.context.updateMeal()
         })
+    }
+
+    //If user clicks cancel, the ID of the meal is passed to an event handler to updat the state and collapse the EditMeal expansion on the page
+    handleClickCancelEdit = id => {
+        this.context.updateMealId(id)
     }
 
     render() { 

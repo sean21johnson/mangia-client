@@ -13,7 +13,7 @@ import PublicOnlyRoute from './../Utils/PublicOnlyRoute';
 import PrivateRoute from './../Utils/PrivateRoute';
 import './App.css';
 
-
+//App Component holds state of Mangia application
 class App extends Component {
   state = {
     meals: [],
@@ -23,6 +23,7 @@ class App extends Component {
     dropdownText: "",
   };
 
+  //GET fetch API for getting every meal in a users collection from server/database
   getAllMeals = () => {
     Promise.all([
       fetch(`${config.API_ENDPOINT}/meals`, {
@@ -51,6 +52,7 @@ class App extends Component {
       })
   }
 
+  //GET fetch API used for getting all user's meals for the category that they select from the 'Meal Category' dropdown (breakfast, lunch, dinner, snack, dessert)
   handleCategoryFilter = category => {
     Promise.all([
       fetch(`${config.API_ENDPOINT}/meals?filter=${category}`, {
@@ -78,6 +80,7 @@ class App extends Component {
       })
   }
 
+  //GET fetch API used for getting all user's meals where the meal_name contains the search term that the user inputs in the 'Search for Meal' search bar
   handleSearchFilter = searchTerm => {
     Promise.all([
       fetch(`${config.API_ENDPOINT}/meals?search=${searchTerm}`, {
@@ -102,11 +105,12 @@ class App extends Component {
       })
   }
 
+  //componentDidMount calls getAllMeals so that the user first sees all meals in their collection when they login
   componentDidMount() {
-    this.getAllMeals()
+    // this.getAllMeals()
   }
 
-
+  //If a user adds a meal to their collection, the meals array within state is updated to include the new meal
   handleAddMeal = meal => {
     this.setState({
       meals: [
@@ -116,6 +120,7 @@ class App extends Component {
     })
   }
 
+  //If a user deletes a meal from their collection, the meals array within state is updated to exclude the new meal
   handleDeleteMeal = mealId => {
     this.setState({
       meals: this.state.meals.filter(meal => meal.meal_id !== mealId)
@@ -124,13 +129,15 @@ class App extends Component {
     this.getAllMeals()
   }
 
-  handleUpdateMeal = id => {
+  //After meal edit has occurred, update the idOfMeal within state back to null so that the EditMeal expansion is no longer reflecting on the page
+  handleUpdateMeal = () => {
     this.getAllMeals()
     this.setState({
       idOfMeal: null
     })
   }
 
+  //If user clicks edit, update the state of the idOfMeal property to be the ID of the meal selected, which will conditionally render that EditMeal component
   handleUpdateMealId = id => {
     if (id === this.state.idOfMeal) {
       this.setState({
@@ -142,6 +149,7 @@ class App extends Component {
     })}
   }
 
+  //Update the indexOfMeal property in state to the specific index that the user selected
   handleUpdateIndex = index => {
     this.setState({
       indexOfMeal: index,
@@ -149,12 +157,14 @@ class App extends Component {
     })
   }
 
+  //Update the searchText property in state to the searchTerm that the user inputs
   handleSearchUpdate = searchTerm => {
     this.setState({
       searchText: searchTerm
     })
   }
 
+  //Method to render components based on the URL path
   renderRoutes() {
     return (
       <>
@@ -170,6 +180,7 @@ class App extends Component {
     )
   }
 
+  //Pass the context and event handlers which impact state down to the child components
   render() {
     const value = {
       meals: this.state.meals,
@@ -181,12 +192,12 @@ class App extends Component {
       addMeal: this.handleAddMeal,
       deleteMeal: this.handleDeleteMeal,
       updateMeal: this.handleUpdateMeal,
-      updateMealId: this.handleUpdateMealId,
-      updateIndex: this.handleUpdateIndex,
       categoryFilter: this.handleCategoryFilter,
       searchFilter: this.handleSearchFilter,
       searchChange: this.handleSearchUpdate,
       categoryChange: this.handleCategoryUpdate,
+      updateIndex: this.handleUpdateIndex,
+      updateMealId: this.handleUpdateMealId 
     }
 
 

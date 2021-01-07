@@ -14,7 +14,7 @@ class Instructions extends Component {
 
                 <div className="Instruction-Steps"></div>
                 <p className="Instructions_opening">For the best user experience on Mangia, please utilize Imgur on your desktop to create .jpg URL image links*. If you would like
-                    to try creating images through the Imgur mobile application, please <a href="mailto:seanjohnson220@gmail.com">Email</a> customer support for additional instructions.
+                    to try creating images through the Imgur mobile application, please <a href="mailto:seanjohnson220@gmail.com">Email</a> our customer support team for additional instructions.
                 </p>
                     <section className="Instructions-Signup">
                         <ol className="Instructions_List">

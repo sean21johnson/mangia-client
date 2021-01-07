@@ -14,10 +14,12 @@ class Login extends Component {
 
     static contextType = ApiContext;
 
+    //Re-direct to landing page if user presses cancel button
     handleClickCancel = () => {
         this.props.history.push('/')
     }
 
+    //POST fetch API used confirm details of that the user inputted for username and password are valid. If so, a JWT auth token is saved down in local storage on the client
     handleLoginSubmit = ev => {
         ev.preventDefault()
         const { login_username, login_password } = ev.target

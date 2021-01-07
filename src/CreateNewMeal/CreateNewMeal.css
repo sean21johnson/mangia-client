@@ -12,6 +12,11 @@
     margin-top: 18px;
 }
 
+.create_category_dropdown {
+    width: 35%;
+    font-size: 12px;
+}
+
 .meal_name_div {
     display: flex;
     justify-content: space-between;
@@ -160,6 +165,11 @@
 
     .create_cancel_button {
         margin-right: 55px;
+    }
+
+    .create_category_dropdown {
+        width: 35%;
+        font-size: 14px;
     }
 }
 

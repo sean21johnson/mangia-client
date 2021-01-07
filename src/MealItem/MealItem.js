@@ -11,6 +11,7 @@ class MealItem extends Component {
 
     static contextType = ApiContext;
 
+    //DELETE fetch API used to delete an item from database if user clicks Delete button
     handleClickDelete = e => {
         e.preventDefault()
         const mealId = this.props.id
@@ -40,8 +41,8 @@ class MealItem extends Component {
 
     }
 
+    //Determines if a given meal is clicked so that the state knows to expand and collapse the additional details (meal category, meal time, description)
     handleUpdateStateIndex = e => {
-
         if (this.context.indexOfMeal !== this.props.index) {
             this.context.indexOfMeal = this.props.index
             this.context.updateIndex(this.context.indexOfMeal)
@@ -51,16 +52,18 @@ class MealItem extends Component {
         }
     }
 
-
-
-    render() { 
-
-        let mealString = this.props.meal_time.substring(0, 10)
+    //Method to update the format of the meal_time string received from the database
+    handleDateFormat = (mealString) => {
+        mealString.substring(0, 10)
         let year = mealString.substring(0, 4)
         let month = mealString.substring(5,7)
         let day = mealString.substring(8,10)
-        mealString = `${month}-${day}-${year}`
+        
+        return mealString = `${month}-${day}-${year}`
+    }
 
+
+    render() { 
         return ( 
             <div className="meal_container_item">
                 <li className="MealItem">
@@ -69,18 +72,16 @@ class MealItem extends Component {
                         <h6 className="meal_picture_name">{this.props.meal_name}</h6>
                     </div>
 
-
                         {this.props.index === this.context.indexOfMeal && 
                         
                         <div className="additional_details">
-                            <p className="meal_paragraph_details">{this.props.meal_category}: {mealString}</p> 
+                            <p className="meal_paragraph_details">{this.props.meal_category}: {this.handleDateFormat(this.props.meal_time)}</p> 
                             <p className="meal_description_details">{this.props.meal_description}</p>
                             <div className="meal_buttons">
                                 <button className="Meal_delete" type="button" onClick={this.handleClickDelete}>Delete</button>
                                 <button className="Meal_edit" type="button" onClick={this.handleClickEdit}>Edit</button>
                             </div>
                         </div>}
-
 
                         {this.props.id === this.context.idOfMeal &&
 

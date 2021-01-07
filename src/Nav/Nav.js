@@ -11,14 +11,17 @@ class Nav extends Component {
 
     static contextType = ApiContext;
 
+    //If user clicks on Mangia icon top right, all meals are displayed
     handleMangiaClick = () => {
         this.context.everyMeal()
     }
 
+    //Clear auth token from local storage which will log the user out
     handleLogoutClick = () => {
         TokenService.clearAuthToken()
     }
 
+    //Method to reflect what the Nav should look like if a user is logged in
     renderLoginLink() {
         return (
             <header className="header">
@@ -36,6 +39,7 @@ class Nav extends Component {
         )
     }
 
+    //Method to reflect what the Nav should look like if a user is logged out
     renderLogoutLink() {
         return (
             <header className="header">

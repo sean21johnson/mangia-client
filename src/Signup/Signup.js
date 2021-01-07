@@ -6,15 +6,16 @@ import './Signup.css'
 
 
 class Signup extends Component {
-
     state = {
         error: ''
     }
 
+    //If user clicks on cancel button, re-direct to the landing page
     handleClickCancel = () => {
         this.props.history.push('/')
     }
 
+    //POST fetch API used to add user to database if they fill in form details
     handleRegisterSubmit = ev => {
         ev.preventDefault()
         const { first_name, last_name, email, username, password } = ev.target

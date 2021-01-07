@@ -26,9 +26,25 @@ h1 {
     width: 51%;
 }
 
+.Demo_Header {
+    font-family: monospace;
+    color: #e43d00;
+    width: 51%;
+    letter-spacing: 1.2px;
+}
+
 .Helper_paragraphs {
     font-family: sans-serif;
     text-indent: 20px;
+}
+
+.Demo_paragraph, .Demo_login, .Demo_password {
+    font-family: sans-serif;
+    text-indent: 20px;
+}
+
+.Demo_password {
+    margin-bottom: 30px;
 }
 
 .GettingStarted_List {
@@ -49,6 +65,19 @@ a:hover {
     color: rgb(255, 88, 88)
 }
 
+.mangia_description {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.mangia_demo {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 
 @media all and (min-width: 700px) {
     .LandingPage {
@@ -66,11 +95,11 @@ a:hover {
         margin-top: 20px;
     }
 
-    .Helper_Header {
+    .Helper_Header, .Demo_Header {
         font-size: 30px;
     }
 
-    .Helper_paragraphs {
+    .Helper_paragraphs, .Demo_paragraph, .Demo_login, .Demo_password {
         font-size: 20px;
         line-height: 1.5;
     }
@@ -82,5 +111,9 @@ a:hover {
     .GettingStarted_List {
         font-size: 20px;
         line-height: 2;
+    }
+
+    .Demo_password {
+        margin-bottom: 60px;
     }
 }

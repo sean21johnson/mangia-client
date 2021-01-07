@@ -17,7 +17,7 @@ class CreateNewMeal extends Component {
         }
     }
 
-    //once a user is logged in, need to extract the user id from the token in local storage and send that as the user id
+    //User fills in the form for a new meal and passes to the handleSubmit method which in turn uses a GET fetch API to POST a new meal in the database
     handleSubmit = e => {
         e.preventDefault()
         const { meal_name, meal_image, meal_description, meal_category } = e.target
@@ -46,6 +46,7 @@ class CreateNewMeal extends Component {
         })
     }
 
+    //If user clicks cancel, re-direct to the MealList
     handleClickCancel = () => {
         this.props.history.push('/meals')
     }
@@ -67,7 +68,7 @@ class CreateNewMeal extends Component {
                             </div>
                             <div className="meal_category_div">
                                 <label className="meal_category_class" htmlFor='meal_category'>Meal Category</label>
-                                <select className="category_dropdown" name="meal_category" required>
+                                <select className="create_category_dropdown" name="meal_category" required>
                                     <option value="Breakfast">Breakfast</option>
                                     <option value="Lunch">Lunch</option>
                                     <option value="Dinner">Dinner</option>
