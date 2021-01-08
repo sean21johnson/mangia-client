@@ -27,7 +27,7 @@ class Instructions extends Component {
                                 <img className="image-newpost" src="https://i.imgur.com/ePTjmNc.jpg" alt="How to make a new post"></img>
                             </div>
                             <li>Drag and drop a saved image in the dotted box where it says 'Drop images here' or select 'Choose Photo/Video' to find and upload the image from
-                                your hard drive.
+                                your hard drive.</li>
                             <div className="instructions_image_drag">
                                 <img className="image-new" src="https://i.imgur.com/AnRvS27.jpg" alt="where to put the file"></img>
                             </div>
@@ -35,7 +35,7 @@ class Instructions extends Component {
                             <div className="instructions_image_meal">
                                 <img className="image-copylink" src="https://imgur.com/VifgH9X.jpg" alt="where to copy the link"></img>
                             </div>
-                            </li>
+                            
                             <li>Copy the link provided and add '.jpg' to the end of the URL when entering the URL field on the 'Create New Meal' form.</li>
                         </ol>
                         <p className="imgur_not_required">*Imgur not required if you already have .jpg URLs for your pictures</p>
