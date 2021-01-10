@@ -12,9 +12,10 @@
 
 ---
 
-###User Flows:
+### User Flows:
 
 New / any user goes to landing page
+
 -> views description of site
 -> views steps for getting 
 -> views details to use demo account
@@ -59,12 +60,14 @@ User navigates meal collection using Mangia Nav Bar
 
 <img width="400px" alt="Mangia Nav Bar" src="https://imgur.com/iC90RbF.jpg">
 
-<img width="400px" alt="Mangia Nav Bar" src="https://imgur.com/hVkBhJy.jpg">
+<img width="400px" alt="Mangia Nav Bar" src="https://imgur.com/Tcx6FvF.jpg">
 
 ---
 
 ### Tech Stack
+
 This client-side application was created with:
+
 <img align="left" alt="Visual Studio Code" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
 <img align="left" alt="HTML5" src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" />
 <img align="left" alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
