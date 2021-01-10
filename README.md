@@ -16,9 +16,9 @@
 
 New / any user goes to landing page
 
--views description of site
--views steps for getting 
--views details to use demo account
+    -> views description of site
+    -> views steps for getting 
+    -> views details to use demo account
 
 New user registers for an account
 
