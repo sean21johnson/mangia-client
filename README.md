@@ -90,14 +90,14 @@ This client-side application was created with:
 
 In the project directory, you can run:
 
-    npm start
+`npm start`
 
 The page will reload if you make any edits.
 
-    npm test
+`npm test`
 
 Launches the test runner in the interactive watch mode.
 
-    npm run build
+`npm run build`
 
-Builds the app for production to the build folder
+Builds the app for production to the `build` folder
