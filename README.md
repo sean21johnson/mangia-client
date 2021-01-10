@@ -4,7 +4,7 @@
 
 ---
 
-[View the Mangia app here](https://mangia-client.vercel.app/meals)
+[View the Mangia app here](https://mangia-client.vercel.app)
 
 [View the Mangia server repo here](https://github.com/sean21johnson/mangia-server)
 
