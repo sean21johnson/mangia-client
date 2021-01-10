@@ -8,7 +8,7 @@
 
 [View the Mangia server repo here](https://github.com/sean21johnson/mangia-server)
 
-**Mangia** was created to help people store memories of their favorite meals. "A picture is worth 1000 words", said some smart photog a long time ago. The Mangia UI is centered around this insightful mantra. Front & center are pictures of all the meals in a user's collection. Click on the picture of any meal in your collection for additional meal details. Update meal details or delete a meal from your collection at any time. To quickly find a memory, utilize the Mangia search bar or meal category filter. 
+**Mangia** was created to help people store memories of their favorite meals. "A picture is worth 1000 words", said some smart photog a long time ago. The Mangia UI is centered around this insightful mantra. Front & center are pictures of all the meals in a user's collection. Click on the picture of any meal in your collection for additional meal details. Update meal details or delete a meal from your collection at any time. To quickly find a memory, utilize the Mangia search bar or meal category filter. And remember to always snap a picture of what you're eating and add the meal memory to your evergrowing collection!
 
 ---
 
