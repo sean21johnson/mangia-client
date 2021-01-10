@@ -63,11 +63,13 @@ User navigates meal collection using Mangia Nav Bar:
 
 <img width="400px" alt="Mangia Nav Bar" src="https://imgur.com/3D9ezOf.jpg">
 
-<img width="400px" alt="Mangia Meal Collection" src="https://imgur.com/u6dRVJi.jpg">
+<img width="400px" alt="Mangia Add Meal" src="https://imgur.com/u6dRVJi.jpg">
 
-<img width="400px" alt="Mangia Nav Bar" src="https://imgur.com/iC90RbF.jpg">
+<img width="400px" alt="Mangia Meal Collection" src="https://imgur.com/iC90RbF.jpg">
 
-<img width="400px" alt="Mangia Nav Bar" src="https://imgur.com/Tcx6FvF.jpg">
+<img width="400px" alt="Mangia Meal Item" src="https://imgur.com/Tcx6FvF.jpg">
+
+<img width="400px" alt="Mangia Footer" src="https://imgur.com/etNK2lY.jpg">
 
 ---
 
