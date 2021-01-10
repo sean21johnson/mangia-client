@@ -12,7 +12,7 @@
 
 ---
 
-### User Flows:
+### User Flows
 
 New / any user goes to landing page:
 
