@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Mangia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Create meal memories. Add memories to collection. Nostalgically tingle your taste buds forever.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+[View the Mangia app here](https://mangia-client.vercel.app/meals)
 
-### `npm start`
+[View the Mangia server repo here](https://github.com/sean21johnson/mangia-server)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Mangia** was created to help people store memories of their favorite meals. "A picture is worth 1000 words", said some smart photog a long time ago. The Mangia UI is centered around this insightful mantra. Front & center are pictures of all the meals in a user's collection. Click on the picture of any meal in your collection for additional meal details. Update meal details or delete a meal from your collection at any time. To quickly find a memory, utilize the Mangia search bar or meal category filter. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+###User Flows:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+New / any user goes to landing page
+-> views description of site
+-> views steps for getting 
+-> views details to use demo account
 
-### `npm run build`
+New user registers for an account
+-> user goes to signup page
+-> user enters registration details
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+New user logs into account
+-> user enters username and password
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+User adds meal
+-> user clicks on 'Add Meal' button
+-> user enters image, name, description, category of meal
+-> user repeats process to create multiple meals
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+User views meal collection
+-> user views all meals in collection
+-> users see a picture and name of the meals they have stored
 
-### `npm run eject`
+User clicks on the picture of a meal
+-> details of the meal expand
+-> user can see when the meal was originally created
+-> user can see a description of the meal
+-> user can delete the meal from the meal collection
+-> user can edit the meal
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+User edits meal
+-> user changes the name, image, category and/or description of a meal
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+User navigates meal collection using Mangia Nav Bar
+-> user searches in Mangia search bar for the name of a meal (any meal names containing this search term are filtered on the page)
+-> user selects a meal category from the dropdown (all meals in this category are filtered on the page) 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Screenshots
 
-## Learn More
+<img width="400px" alt="Mangia Nav Bar" src="https://imgur.com/3D9ezOf.jpg">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="400px" alt="Mangia Meal Collection" src="https://imgur.com/u6dRVJi.jpg">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="400px" alt="Mangia Nav Bar" src="https://imgur.com/iC90RbF.jpg">
 
-### Code Splitting
+<img width="400px" alt="Mangia Nav Bar" src="https://imgur.com/hVkBhJy.jpg">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Tech Stack
+This client-side application was created with:
+<img align="left" alt="Visual Studio Code" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
+<img align="left" alt="HTML5" src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" />
+<img align="left" alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+<img align="left" alt="CSS3" src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" />
+<img align="left" alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img align="left" alt="Git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
+<img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
+<img align="left" alt="GitHub" src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />  
