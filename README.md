@@ -14,48 +14,40 @@
 
 ### User Flows:
 
-New / any user goes to landing page
-
+New / any user goes to landing page:
     -> views description of site
     -> views steps for getting 
     -> views details to use demo account
 
-New user registers for an account
+New user registers for an account:
+    -> user goes to signup page
+    -> user enters registration details
 
--> user goes to signup page
--> user enters registration details
+New user logs into account:
+    -> user enters username and password
 
-New user logs into account
+User adds meal:
+    -> user clicks on 'Add Meal' button
+    -> user enters image, name, description, category of meal
+    -> user repeats process to create multiple meals
 
--> user enters username and password
+User views meal collection:
+    -> user views all meals in collection
+    -> users see a picture and name of the meals they have stored
 
-User adds meal
+User clicks on the picture of a meal:
+    -> details of the meal expand
+    -> user can see when the meal was originally created
+    -> user can see a description of the meal
+    -> user can delete the meal from the meal collection
+    -> user can edit the meal
 
--> user clicks on 'Add Meal' button
--> user enters image, name, description, category of meal
--> user repeats process to create multiple meals
+User edits meal:
+    -> user changes the name, image, category and/or description of a meal
 
-User views meal collection
-
--> user views all meals in collection
--> users see a picture and name of the meals they have stored
-
-User clicks on the picture of a meal
-
--> details of the meal expand
--> user can see when the meal was originally created
--> user can see a description of the meal
--> user can delete the meal from the meal collection
--> user can edit the meal
-
-User edits meal
-
--> user changes the name, image, category and/or description of a meal
-
-User navigates meal collection using Mangia Nav Bar
-
--> user searches in Mangia search bar for the name of a meal (any meal names containing this search term are filtered on the page)
--> user selects a meal category from the dropdown (all meals in this category are filtered on the page) 
+User navigates meal collection using Mangia Nav Bar:
+    -> user searches in Mangia search bar for the name of a meal (any meal names containing this search term are filtered on the page)
+    -> user selects a meal category from the dropdown (all meals in this category are filtered on the page) 
 
 ---
 
