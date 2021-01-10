@@ -85,3 +85,19 @@ This client-side application was created with:
 <img align="left" alt="Git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
 <img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
 <img align="left" alt="GitHub" src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />  
+
+### Available Scripts
+
+In the project directory, you can run:
+
+    npm start
+
+The page will reload if you make any edits.
+
+    npm test
+
+Launches the test runner in the interactive watch mode.
+
+    npm run build
+
+Builds the app for production to the build folder
