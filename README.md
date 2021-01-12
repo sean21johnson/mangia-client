@@ -97,9 +97,9 @@ This client-side application was created with:
 ➖**Header🔻** 
 
 ➖➖**Landing Page**
-\➖➖➖*Introduction*
-\➖➖➖*Getting Started*
-\➖➖➖*Demo Info*
+➖➖➖*Introduction*  
+➖➖➖*Getting Started*  
+➖➖➖*Demo Info*  
 
 ➖➖**Registration Page**
 ➖➖➖*Registration Form*
