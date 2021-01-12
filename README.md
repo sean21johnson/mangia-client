@@ -90,6 +90,40 @@ This client-side application was created with:
 
 ---
 
+### Components Tree
+
+**App🔻**
+
+➖**Header🔻** 
+
+➖➖**Landing Page**
+➖➖➖*Introduction*
+➖➖➖*Getting Started*
+➖➖➖*Demo Info*
+
+➖➖**Registration Page**
+➖➖➖*Registration Form*
+
+➖➖**Login Page**
+➖➖➖*Login Form*
+
+➖➖**Create New Meal Page**
+➖➖➖*Create Mew Meal Form*
+➖➖➖*Link to Instructions Page*
+
+➖➖**Instructions Page**
+➖➖➖*Instructions for Creating Image Links*
+
+➖➖**MealsList Page**
+➖➖➖*Meal Search/Filter Nav Bar*
+➖➖➖*Meal Items*
+➖➖➖➖*Additional Meal Details*
+➖➖➖➖➖*Edit Meal Item Details*
+
+➖**Footer🔻** 
+
+---
+
 ### Available Scripts
 
 In the project directory, you can run:

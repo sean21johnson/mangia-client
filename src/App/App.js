@@ -99,8 +99,8 @@ class App extends Component {
 
 	//componentDidMount calls getAllMeals so that the user first sees all meals in their collection when they login
 	componentDidMount() {
-		if (!this.state.loggedIn === false) {
-			this.getAllMeals();
+		if (TokenService.hasAuthToken()) {
+			return this.getAllMeals();
 		}
 	}
 
