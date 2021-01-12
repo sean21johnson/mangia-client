@@ -1,97 +1,121 @@
-import React, { Component } from 'react';
-import ApiContext from '../ApiContext';
-import './MealItem.css'
-import config from './../config';
-import EditMeal from './../EditMeal/EditMeal';
+import React, { Component } from "react";
+import ApiContext from "../ApiContext";
+import "./MealItem.css";
+import config from "./../config";
+import EditMeal from "./../EditMeal/EditMeal";
 
 class MealItem extends Component {
-    static defaultProps = {
-        onDeleteMeal: () => {}
-    }
+	static defaultProps = {
+		onDeleteMeal: () => {},
+	};
 
-    static contextType = ApiContext;
+	static contextType = ApiContext;
 
-    //DELETE fetch API used to delete an item from database if user clicks Delete button
-    handleClickDelete = e => {
-        e.preventDefault()
-        const mealId = this.props.id
+	//DELETE fetch API used to delete an item from database if user clicks Delete button
+	handleClickDelete = (e) => {
+		e.preventDefault();
+		const mealId = this.props.id;
 
-        fetch(`${config.API_ENDPOINT}/meals/${mealId}`, {
-            method: 'DELETE',
-            headers: {
-                'content-type': 'application/json'
-            }
-        })
-        .then(res => {
-            if (!res.ok)
-                return res.json.then(e => Promise.reject(e))
-        })
-        .then(() => {
-            this.context.deleteMeal(mealId)
-            this.props.onDeleteMeal()
-        })
-    }
+		fetch(`${config.API_ENDPOINT}/meals/${mealId}`, {
+			method: "DELETE",
+			headers: {
+				"content-type": "application/json",
+			},
+		})
+			.then((res) => {
+				if (!res.ok) return res.json.then((e) => Promise.reject(e));
+			})
+			.then(() => {
+				this.context.deleteMeal(mealId);
+				this.props.onDeleteMeal();
+			});
+	};
 
-    handleClickEdit = e => {
-        if (this.context.idOfMeal !== this.props.id) {
-            this.context.idOfMeal = this.props.id
-            this.context.updateMealId(this.context.idOfMeal)
-        }
-        this.context.updateMealId(this.props.id)
+	handleClickEdit = (e) => {
+		if (this.context.idOfMeal !== this.props.id) {
+			this.context.idOfMeal = this.props.id;
+			this.context.updateMealId(this.context.idOfMeal);
+		}
+		this.context.updateMealId(this.props.id);
+	};
 
-    }
+	//Determines if a given meal is clicked so that the state knows to expand and collapse the additional details (meal category, meal time, description)
+	handleUpdateStateIndex = (e) => {
+		if (this.context.indexOfMeal !== this.props.index) {
+			this.context.indexOfMeal = this.props.index;
+			this.context.updateIndex(this.context.indexOfMeal);
+		} else {
+			this.context.updateIndex(null);
+		}
+	};
 
-    //Determines if a given meal is clicked so that the state knows to expand and collapse the additional details (meal category, meal time, description)
-    handleUpdateStateIndex = e => {
-        if (this.context.indexOfMeal !== this.props.index) {
-            this.context.indexOfMeal = this.props.index
-            this.context.updateIndex(this.context.indexOfMeal)
-        }
-        else {
-            this.context.updateIndex(null)
-        }
-    }
+	//Method to update the format of the meal_time string received from the database
+	handleDateFormat = (mealString) => {
+		mealString.substring(0, 10);
+		let year = mealString.substring(0, 4);
+		let month = mealString.substring(5, 7);
+		let day = mealString.substring(8, 10);
 
-    //Method to update the format of the meal_time string received from the database
-    handleDateFormat = (mealString) => {
-        mealString.substring(0, 10)
-        let year = mealString.substring(0, 4)
-        let month = mealString.substring(5,7)
-        let day = mealString.substring(8,10)
-        
-        return mealString = `${month}-${day}-${year}`
-    }
+		return (mealString = `${month}-${day}-${year}`);
+	};
 
+	render() {
+		return (
+			<div className="meal_container_item">
+				<li className="MealItem">
+					<div className="showing_section">
+						<img
+							className="meal_picture_image"
+							src={this.props.meal_image}
+							alt="meal pic"
+							onClick={this.handleUpdateStateIndex}
+						></img>
+						<h6 className="meal_picture_name">{this.props.meal_name}</h6>
+					</div>
 
-    render() { 
-        return ( 
-            <div className="meal_container_item">
-                <li className="MealItem">
-                    <div className="showing_section">
-                        <img className="meal_picture_image" src={this.props.meal_image} alt="meal pic" onClick={this.handleUpdateStateIndex}></img>
-                        <h6 className="meal_picture_name">{this.props.meal_name}</h6>
-                    </div>
+					{this.props.index === this.context.indexOfMeal && (
+						<div className="additional_details">
+							<p className="meal_paragraph_details">
+								{this.props.meal_category}:{" "}
+								{this.handleDateFormat(this.props.meal_time)}
+							</p>
+							<p className="meal_description_details">
+								{this.props.meal_description}
+							</p>
+							<div className="meal_buttons">
+								<button
+									className="Meal_delete"
+									type="button"
+									onClick={this.handleClickDelete}
+								>
+									Delete
+								</button>
+								<button
+									className="Meal_edit"
+									type="button"
+									onClick={this.handleClickEdit}
+								>
+									Edit
+								</button>
+							</div>
+						</div>
+					)}
 
-                        {this.props.index === this.context.indexOfMeal && 
-                        
-                        <div className="additional_details">
-                            <p className="meal_paragraph_details">{this.props.meal_category}: {this.handleDateFormat(this.props.meal_time)}</p> 
-                            <p className="meal_description_details">{this.props.meal_description}</p>
-                            <div className="meal_buttons">
-                                <button className="Meal_delete" type="button" onClick={this.handleClickDelete}>Delete</button>
-                                <button className="Meal_edit" type="button" onClick={this.handleClickEdit}>Edit</button>
-                            </div>
-                        </div>}
-
-                        {this.props.id === this.context.idOfMeal &&
-
-                        <div>
-                        <EditMeal id={this.props.id} name={this.props.meal_name} description={this.props.meal_description} url={this.props.meal_image} category={this.props.meal_category}></EditMeal>
-                        </div>}                   
-                </li>
-            </div>
-         );
-    }
+					{this.props.id === this.context.idOfMeal && (
+						<div>
+							<EditMeal
+								id={this.props.id}
+								name={this.props.meal_name}
+								description={this.props.meal_description}
+								url={this.props.meal_image}
+								category={this.props.meal_category}
+							></EditMeal>
+						</div>
+					)}
+				</li>
+			</div>
+		);
+	}
 }
- 
+
 export default MealItem;

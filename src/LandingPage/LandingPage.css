@@ -1,119 +1,123 @@
 h1 {
-    font-variant-caps: petite-caps;
-    font-family: monospace;
-    text-align: center;
-    font-size: 40px;
-    margin: 8px;
-    background-image: url(https://imgur.com/4jbDbuZ.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 100% 100%;
-    padding: 20%;
-    border-radius: 5px;
-    color: #dde2e2;
-    text-shadow: 2px 2px black;
+	font-variant-caps: petite-caps;
+	font-family: monospace;
+	text-align: center;
+	font-size: 40px;
+	margin: 8px;
+	background-image: url(https://imgur.com/4jbDbuZ.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 100% 100%;
+	padding: 20%;
+	border-radius: 5px;
+	color: #dde2e2;
+	text-shadow: 2px 2px black;
 }
 
 .Helper_Header {
-    font-family: monospace;
-    color: #e43d00;
-    width: 64%;
+	font-family: monospace;
+	color: #e43d00;
+	width: 64%;
 }
 
 .GettingStarted_Header {
-    font-family: monospace;
-    color: #e43d00;
-    width: 51%;
+	font-family: monospace;
+	color: #e43d00;
+	width: 51%;
 }
 
 .Demo_Header {
-    font-family: monospace;
-    color: #e43d00;
-    width: 51%;
-    letter-spacing: 1.2px;
+	font-family: monospace;
+	color: #e43d00;
+	width: 51%;
+	letter-spacing: 1.2px;
 }
 
 .Helper_paragraphs {
-    font-family: sans-serif;
-    text-indent: 20px;
+	font-family: sans-serif;
+	text-indent: 20px;
 }
 
-.Demo_paragraph, .Demo_login, .Demo_password {
-    font-family: sans-serif;
-    text-indent: 20px;
+.Demo_paragraph,
+.Demo_login,
+.Demo_password {
+	font-family: sans-serif;
+	text-indent: 20px;
 }
 
 .Demo_password {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .GettingStarted_List {
-    font-family: sans-serif;
+	font-family: sans-serif;
 }
 
 .LandingPage {
-    background-color: #fff7f4;
-    padding-bottom: 2px;
-    padding-top: 2px;
+	background-color: #fff7f4;
+	padding-bottom: 2px;
+	padding-top: 2px;
 }
 
 a:link {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a:hover {
-    color: rgb(255, 88, 88)
+	color: rgb(255, 88, 88);
 }
 
 .mangia_description {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .mangia_demo {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-
 @media all and (min-width: 700px) {
-    .LandingPage {
-        width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+	.LandingPage {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-    h1 {
-        font-size: 85px;
-        width: 50%;
-        height: 60px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 20px;
-    }
+	h1 {
+		font-size: 85px;
+		width: 50%;
+		height: 60px;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 20px;
+	}
 
-    .Helper_Header, .Demo_Header {
-        font-size: 30px;
-    }
+	.Helper_Header,
+	.Demo_Header {
+		font-size: 30px;
+	}
 
-    .Helper_paragraphs, .Demo_paragraph, .Demo_login, .Demo_password {
-        font-size: 20px;
-        line-height: 1.5;
-    }
+	.Helper_paragraphs,
+	.Demo_paragraph,
+	.Demo_login,
+	.Demo_password {
+		font-size: 20px;
+		line-height: 1.5;
+	}
 
-    .GettingStarted_Header {
-        font-size: 30px;
-    }
+	.GettingStarted_Header {
+		font-size: 30px;
+	}
 
-    .GettingStarted_List {
-        font-size: 20px;
-        line-height: 2;
-    }
+	.GettingStarted_List {
+		font-size: 20px;
+		line-height: 2;
+	}
 
-    .Demo_password {
-        margin-bottom: 60px;
-    }
+	.Demo_password {
+		margin-bottom: 60px;
+	}
 }

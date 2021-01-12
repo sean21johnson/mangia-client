@@ -1,72 +1,70 @@
 .NavMeal {
-    margin-top: 11px;
-    margin-right: 11px;
-    margin-left: 11px;
-    padding: 7px;
-    background-color: #ca0000;
-    border-radius: 3px;
-    display: flex;
-    justify-content: space-around;
+	margin-top: 11px;
+	margin-right: 11px;
+	margin-left: 11px;
+	padding: 7px;
+	background-color: #ca0000;
+	border-radius: 3px;
+	display: flex;
+	justify-content: space-around;
 }
 
 .Search_Meal {
-    width: 28%;
-    font-size: 12px;
-    text-align: center;
-    font-family: serif;
-    border-radius: 11px;
-    border: white;
-    font-family: sans-serif;
+	width: 28%;
+	font-size: 12px;
+	text-align: center;
+	font-family: serif;
+	border-radius: 11px;
+	border: white;
+	font-family: sans-serif;
 }
 
 .Create_Meal {
-    color: white;
-    background-color: #00007d;
-    font-size: 15px;
-    border-radius: 10px;
-    border: white;
-    width: 25%;
-    text-align: center;
-    text-decoration: none;
-    padding-top: 1px;
-    padding: 2px;
-    font-variant-caps: petite-caps;
-    font-family: sans-serif
+	color: white;
+	background-color: #00007d;
+	font-size: 15px;
+	border-radius: 10px;
+	border: white;
+	width: 25%;
+	text-align: center;
+	text-decoration: none;
+	padding-top: 1px;
+	padding: 2px;
+	font-variant-caps: petite-caps;
+	font-family: sans-serif;
 }
 
 .category_dropdown {
-    width: 25%;
-    font-size: 12px;
-    font-family: sans-serif;
-    padding-left: 5px;
+	width: 25%;
+	font-size: 12px;
+	font-family: sans-serif;
+	padding-left: 5px;
 }
 
 @media all and (min-width: 700px) {
-    .NavMeal {
-        width: 48%;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 25px;
-        margin-bottom: 15px;
-        padding: 18px;
-    }
+	.NavMeal {
+		width: 48%;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 25px;
+		margin-bottom: 15px;
+		padding: 18px;
+	}
 
-    .Search_Meal {
-        font-size: 16px;
-        width: 20%;
-    }
+	.Search_Meal {
+		font-size: 16px;
+		width: 20%;
+	}
 
-    .Create_Meal {
-        font-size: 23px;
-        padding: 8px;
-        width: 20%;
-    }
+	.Create_Meal {
+		font-size: 23px;
+		padding: 8px;
+		width: 20%;
+	}
 
-    .category_dropdown {
-        font-size: 18px;
-        width: 20%;
-        padding-left: 5px;
-    }
-
-
+	.category_dropdown {
+		font-size: 18px;
+		width: 20%;
+		padding-left: 5px;
+	}
 }

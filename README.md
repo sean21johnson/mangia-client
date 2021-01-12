@@ -17,7 +17,7 @@
 New / any user goes to landing page:
 
     -> views description of site
-    -> views steps for getting 
+    -> views steps for getting
     -> views details to use demo account
 
 New user registers for an account:
@@ -55,7 +55,7 @@ User edits meal:
 User navigates meal collection using Mangia Nav Bar:
 
     -> user searches in Mangia search bar for the name of a meal (any meal names containing this search term are filtered on the page)
-    -> user selects a meal category from the dropdown (all meals in this category are filtered on the page) 
+    -> user selects a meal category from the dropdown (all meals in this category are filtered on the page)
 
 ---
 
@@ -84,7 +84,7 @@ This client-side application was created with:
 <img align="left" alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
 <img align="left" alt="Git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
 <img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
-<img align="left" alt="GitHub" src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />  
+<img align="left" alt="GitHub" src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />
 
 <br/>
 
