@@ -1,6 +1,6 @@
 .nav_bar {
 	display: flex;
-	background-color: #3f4590e0;
+	background: linear-gradient(40deg, #45cafc, #303f9f);
 	justify-content: space-between;
 	align-items: center;
 }
